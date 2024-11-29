@@ -1,0 +1,20 @@
+version: 0.2
+
+
+phases:
+  build:
+    commands:
+      - echo Running tests...
+      - mvn clean package
+      
+  post_build:
+    commands:
+      - echo build completed...
+          
+
+# Artifacts configuration
+artifacts:
+  files:
+    - target/raj-naik.jar 
+  discard-paths: yes               # Optional: to remove the directory structure in the artifact
+
